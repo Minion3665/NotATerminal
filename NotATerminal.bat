@@ -4,9 +4,9 @@ color a
 cls
 :loop
 set /p command="Minion3665@NotATermial.Anti.Filter >>> "
-IF EXIST customCommands/%command%.bat (
-  %"customCommands/" & %command% & ".bat"%
+IF EXIST .\customCommands\%command%.bat (
+  call .\customCommands\%command%.bat
 ) ELSE (
-  %command%
+  call %command%
 )
 goto loop
